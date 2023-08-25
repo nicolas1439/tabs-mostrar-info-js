@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Mostrar infon con tabs</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="tab-cont">
+            <button class="tab-btn">Home</button>
+            <button class="tab-btn">About</button>
+            <button class="tab-btn">Blog</button>
+            <button class="tab-btn">Contact us</button>
+            <div class="line"></div>
+        </div>
+        <div class="content-box">
+            <div class="content">
+                <H2>Home</H2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem porro doloribus, eaque delectus natus. Blanditiis nobis ducimus praesentium illum obcaecati dolore natus, voluptatibus quis? Numquam deleniti placeat repellendus qui.
+                </p>
+            </div>
+            <div class="content">
+                <H2>About</H2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem porro doloribus, eaque delectus natus. Blanditiis nobis ducimus praesentium illum obcaecati dolore natus, voluptatibus quis? Numquam deleniti placeat repellendus qui.
+                </p>
+            </div>
+            <div class="content">
+                <H2>Blog</H2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem porro doloribus, eaque delectus natus. Blanditiis nobis ducimus praesentium illum obcaecati dolore natus, voluptatibus quis? Numquam deleniti placeat repellendus qui.
+                </p>
+            </div>
+            <div class="content">
+                <H2>Contact us</H2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem porro doloribus, eaque delectus natus. Blanditiis nobis ducimus praesentium illum obcaecati dolore natus, voluptatibus quis? Numquam deleniti placeat repellendus qui.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const tabs = document.querySelectorAll(".tab-btn");
+        const all_content = document.querySelectorAll(".content");
+
+        tabs.forEach((tab, index)=>{
+            tab.addEventListener("click", ()=>{
+                tabs.forEach(tab=>{tab.classList.remove("active")});
+                tab.classList.add("active");
+                
+                var line = document.querySelector(".line");
+            line.style.width = e.target.offsetWidth + "px";
+            line.style.left = e.target.offsetLeft + "px";
+            })
+        })
+    </script>
+</body>
+</html>
