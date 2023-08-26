@@ -9,14 +9,14 @@
 <body>
     <div class="contenedor">
         <div class="tab-cont">
-            <button class="tab-btn">Home</button>
+            <button class="tab-btn active">Home</button>
             <button class="tab-btn">About</button>
             <button class="tab-btn">Blog</button>
             <button class="tab-btn">Contact us</button>
             <div class="line"></div>
         </div>
         <div class="content-box">
-            <div class="content">
+            <div class="content active">
                 <H2>Home</H2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem porro doloribus, eaque delectus natus. Blanditiis nobis ducimus praesentium illum obcaecati dolore natus, voluptatibus quis? Numquam deleniti placeat repellendus qui.
@@ -51,10 +51,9 @@
             tab.addEventListener("click", ()=>{
                 tabs.forEach(tab=>{tab.classList.remove("active")});
                 tab.classList.add("active");
-                
-                var line = document.querySelector(".line");
-            line.style.width = e.target.offsetWidth + "px";
-            line.style.left = e.target.offsetLeft + "px";
+
+                all_content.forEach(content=>{content.classList.remove("active")});
+                all_content[index].classList.add("active");
             })
         })
     </script>
